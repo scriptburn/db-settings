@@ -1,7 +1,7 @@
 <?php
-namespace ScriptBurn;
+namespace ScriptBurn\Setting;
 
-class Settings
+class Setting
 {
     protected $pdo, $tableName;
 

@@ -13,11 +13,17 @@ class CreateScbSettingsTable extends Migration
      */
     public function up()
     {
+        if(!Schema::exists('scb_settings'))
+            {
         Schema::create('scb_settings', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name',255)->unique();
+            $table->text('value');
             $table->timestamps();
         });
     }
+
+          
 
     /**
      * Reverse the migrations.
