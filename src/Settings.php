@@ -5,9 +5,9 @@ class Settings
 {
     protected $pdo, $tableName;
 
-    public function __construct($pdo, $tableName = "settings")
+    public function __construct($pdo, $tableName = "scb_settings")
     {
-        $this->tableName = $tableName ? $tableName : 'settings';
+        $this->tableName = $tableName ? $tableName : 'scb_settings';
         $this->pdo       = $pdo;
         $this->setup();
     }
