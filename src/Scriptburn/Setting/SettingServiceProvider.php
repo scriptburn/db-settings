@@ -12,7 +12,7 @@ class SettingServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
-		$this->loadMigrationsFrom(__DIR__.'/migrations');
+ 		$this->loadMigrationsFrom(  __DIR__.'/../../migrations' );
 
 	}
 
@@ -24,10 +24,11 @@ class SettingServiceProvider extends ServiceProvider
 
 	public function register()
 	{
-		$this->app->singleton(Settings::class, function ($app)
+		return $this->app->singleton('Scriptburn\Setting\Setting', function ($app)
 		{
-			return new Settings($app->db);
+			return new Setting($app->db);
 		});
+
 	}
 
 }
