@@ -123,7 +123,6 @@ CREATE TABLE `{$this->tableName}` (
 			else
 			{
 				$expires = is_null($expires) ? $expires : date("Y-m-d H:i:s", time() + $expires);
-
 				$insertStatement = $this->pdo->prepare("INSERT INTO {$this->tableName} (`name`, `value`, `created_at`, `updated_at`, `expires_at`)
                                             VALUES(?, ?, NOW(),NOW(),?) on duplicate key update `value`=?,`updated_at`=NOW()");
 				$insertStatement->execute(array($name, $value, $expires, $value));

@@ -5,7 +5,7 @@
 
 ##Installing and Usage in laraval:
 
-`composer require scriptburn/db-settings ">=1.0.4"`
+`composer require scriptburn/db-settings ">=1.0.5"`
 
 `php artisan migrate`
 
