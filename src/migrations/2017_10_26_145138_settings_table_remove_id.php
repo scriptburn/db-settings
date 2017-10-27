@@ -20,7 +20,7 @@ class SettingsTableRemoveId extends Migration
 				try
 				{
 					DB::statement("ALTER TABLE `scb_settings` DROP `id`;");
-					DB::statement("AALTER TABLE `scb_settings` ADD PRIMARY KEY(`name`);");
+					DB::statement("ALTER TABLE `scb_settings` ADD PRIMARY KEY(`name`);");
 				}
 				catch (\Exception $e)
 				{
