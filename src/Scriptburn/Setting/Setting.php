@@ -48,7 +48,7 @@ CREATE TABLE `{$this->tableName}` (
   `name` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime  NULL,
-  `created_at` datetime    NULL,
+  `updated_at` datetime    NULL,
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 			$settings_table[] = "ALTER TABLE `{$this->tableName}`
